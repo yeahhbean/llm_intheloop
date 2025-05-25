@@ -1,0 +1,19 @@
+{
+  "url": "https://example.com/profile",
+  "method": "GET",
+  "headers": {
+    "User-Agent": "Mozilla/5.0",
+    "Accept": "text/html"
+  },
+  "params": {
+    "name": "<script>alert('xss')</script>"
+  },
+  "body": "",
+  "payload": "<script>alert('xss')</script>",
+  "response_status": 200,
+  "response_headers": {
+    "Content-Type": "text/html"
+  },
+  "response_body": "<html><body>Welcome <script>alert('xss')</script>!</body></html>",
+  "timestamp": "2025-05-25T15:10:00Z"
+}

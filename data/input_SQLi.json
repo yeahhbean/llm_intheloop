@@ -1,0 +1,19 @@
+{
+  "url": "https://example.com/search",
+  "method": "GET",
+  "headers": {
+    "User-Agent": "Mozilla/5.0",
+    "Accept": "application/json"
+  },
+  "params": {
+    "q": "test' OR IF(1=1, SLEEP(5), 0)-- "
+  },
+  "body": "",
+  "payload": "test' OR IF(1=1, SLEEP(5), 0)-- ",
+  "response_status": 200,
+  "response_headers": {
+    "Content-Type": "application/json"
+  },
+  "response_body": "{\"status\": \"ok\", \"results\": []}",
+  "timestamp": "2025-05-25T14:23:45Z"
+}

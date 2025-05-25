@@ -1,0 +1,19 @@
+{
+  "url": "https://vulnerable.site/user?id=2",
+  "method": "GET",
+  "headers": {
+    "User-Agent": "Mozilla/5.0",
+    "Cookie": "auth_token=abc123"
+  },
+  "params": {
+    "id": "2"
+  },
+  "body": "",
+  "payload": "2",
+  "response_status": 200,
+  "response_headers": {
+    "Content-Type": "application/json"
+  },
+  "response_body": "{ \"username\": \"admin\", \"email\": \"admin@vulnerable.site\", \"role\": \"admin\" }",
+  "timestamp": "2025-05-25T17:00:00Z"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "llm-intheloop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {},
+  "dependencies": {
+    "luxon": "^3.6.1"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "url": "https://example.com/redirect",
+  "method": "GET",
+  "headers": {
+    "User-Agent": "Mozilla/5.0",
+    "Accept": "text/html"
+  },
+  "params": {
+    "to": "https://malicious-site.com"
+  },
+  "body": "",
+  "payload": "https://malicious-site.com",
+  "response_status": 302,
+  "response_headers": {
+    "Location": "https://malicious-site.com",
+    "Content-Type": "text/html; charset=UTF-8"
+  },
+  "response_body": "<html><head><meta http-equiv=\"refresh\" content=\"0;url=https://malicious-site.com\"></head></html>",
+  "timestamp": "2025-05-25T15:45:00Z"
+}

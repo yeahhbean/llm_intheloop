@@ -1,0 +1,17 @@
+{
+  "url": "https://vulnerable.site/api/login",
+  "method": "POST",
+  "headers": {
+    "User-Agent": "Mozilla/5.0",
+    "X-Forwarded-For": "1.2.3.4"
+  },
+  "params": {},
+  "body": "username=admin&password=wrongpass123",
+  "payload": "username=admin&password=wrongpass123",
+  "response_status": 200,
+  "response_headers": {
+    "Content-Type": "application/json"
+  },
+  "response_body": "{ \"message\": \"Invalid credentials\" }",
+  "timestamp": "2025-05-25T16:30:00Z"
+}

@@ -1,0 +1,20 @@
+{
+  "url": "https://example.com/api/login",
+  "method": "POST",
+  "headers": {
+    "Content-Type": "application/json",
+    "User-Agent": "Mozilla/5.0"
+  },
+  "params": {},
+  "body": "{\"username\": {\"$ne\": null}, \"password\": {\"$ne\": null}}",
+  "payload": {
+    "username": { "$ne": null },
+    "password": { "$ne": null }
+  },
+  "response_status": 200,
+  "response_headers": {
+    "Content-Type": "application/json"
+  },
+  "response_body": "{\"status\": \"success\", \"token\": \"abc.def.ghi\"}",
+  "timestamp": "2025-05-25T15:30:00Z"
+}
