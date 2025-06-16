@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>llm_intheloop</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header id="gnb">
+      <div class="nav-container">
+        <div class="logo">llm_intheloop</div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#" data-target="main.html">Main</a></li>
+            <li><a href="#" data-target="howitworks.html">How it works</a></li>
+            <li><a href="#" data-target="team.html">Team</a></li>
+            <li><a href="#" data-target="faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="icons">
+          <a
+            href="https://github.com/yeahhbean/llm_intheloop"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/img/github_logo1.png" alt="GitHub" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="/img/discord_logo1.png" alt="Discord" />
+          </a>
+          <a
+            href="https://gemini.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/img/gemini_logo2.png" alt="Gemini" class="big-icon" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="/img/ASC_logo.png" alt="ASC" class="big-icon" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: Landing Page -->
+    <main class="hero">
+      <h1 class="fade-in delay-0">
+        <span class="gradient-text">A Smart Web Security</span>
+      </h1>
+      <h2 class="fade-in delay-1">AI-powered Vulnerability Discovery</h2>
+      <p class="fade-in delay-2">
+        Say goodbye to brute-force fuzzing.<br />
+        Our AI-enhanced system monitors real-time traffic and identifies<br />
+        potential web vulnerabilities — just by browsing.
+      </p>
+      <div class="wave fade-in delay-3"></div>
+      <div class="scroll-hint fade-in delay-4">See what’s next ↓</div>
+    </main>
+
+    <!-- SECTION 2: Scroll to Reveal -->
+    <section class="feature scroll-section">
+      <h1 class="gradient-text fade-up hidden delay-0">
+        Click. Browse. Discover.
+      </h1>
+
+      <h2 class="fade-up hidden delay-1">
+        Real-time scanning powered by your actions
+      </h2>
+
+      <p class="fade-up hidden delay-2">
+        Ready to see what happens under the hood?<br />
+        Explore how our system captures traffic, generates payloads, and<br />
+        validates vulnerabilities — all in real time.
+      </p>
+
+      <div class="buttons fade-up hidden delay-3">
+        <button>Get started</button>
+        <button>How it works</button>
+      </div>
+
+      <div class="hero-illustration fade-up hidden delay-4"></div>
+    </section>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+      document.querySelectorAll(".scroll-section .hidden").forEach((el) => {
+        observer.observe(el);
+      });
+
+      let lastScroll = 0;
+      const gnb = document.getElementById("gnb");
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          // 아래로 스크롤 → 숨김
+          gnb.style.top = "-100px";
+        } else {
+          // 위로 스크롤 → 다시 표시
+          gnb.style.top = "0";
+        }
+
+        lastScroll = currentScroll;
+      });
+      const scrollHint = document.querySelector(".scroll-hint");
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const bodyHeight = document.body.scrollHeight;
+
+        const scrollPercent = (scrollY + windowHeight) / bodyHeight;
+
+        if (scrollPercent >= 0.8) {
+          scrollHint.classList.add("hide");
+        } else {
+          scrollHint.classList.remove("hide");
+        }
+      });
+    </script>
+    <script src="/js/dynamic.js"></script>
+  </body>
+</html>

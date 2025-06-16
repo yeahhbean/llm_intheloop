@@ -1,0 +1,280 @@
+/* 기본 스타일 및 변수 */
+:root {
+  --sidebar-bg: #1e2025;
+  --main-content-bg: #0d0f10;
+  --card-bg: #1e2025;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent-blue: #3b82f6;
+  --border-color: #2d3035;
+  --skill-tag-bg: #2d3035;
+  --skill-tag-text: #a0a0a0;
+  --font-sans: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #000;
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 80px;
+}
+
+/* 메인 콘텐츠 스타일 */
+.main-content {
+  flex-grow: 1;
+  padding: 30px 20px 0;
+  overflow-y: auto;
+}
+
+header#gnb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000;
+  padding: 0px 0px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: top 0.3s ease;
+  display: flex;
+  align-items: center;
+  height: 60px; /* 명시적 높이 고정 */
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 0.5px;
+  line-height: 1; /* 이걸 꼭 추가 */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 0px;
+}
+
+.icons img.big-icon {
+  width: 32px;
+  height: 32px;
+  margin-top: -4px; /* 위로 6px 올림 */
+}
+
+.icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.icons img:hover {
+  transform: scale(1.2);
+}
+
+.team-overall-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.member-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  /* 카드 내부 요소 정렬을 위해 추가 */
+  flex-direction: column;
+  /* 내부 요소 수직 정렬 */
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+  border: 3px solid var(--border-color);
+}
+
+.member-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.member-role {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.member-title-custom {
+  font-size: 1rem;
+  color: var(--accent-blue);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.member-description {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  line-height: 1.5;
+  flex-grow: 1;
+  /* 설명 부분이 남는 공간을 채우도록 */
+}
+
+.skills-container {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-tag {
+  background-color: var(--skill-tag-bg);
+  color: var(--skill-tag-text);
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  /* 카드의 나머지 내용이 채워진 후 하단에 위치 */
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+.social-link-text {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.social-link-text:hover {
+  color: var(--accent-blue);
+}
+
+.external-link-icon svg {
+  fill: var(--text-secondary);
+  transition: fill 0.2s ease;
+}
+
+.external-link-icon:hover svg {
+  fill: var(--accent-blue);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .icons {
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  header {
+    padding: 16px 20px;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar-nav ul {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .sidebar-nav li a {
+    padding: 10px;
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+
+  .sidebar-header span {
+    display: none;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
